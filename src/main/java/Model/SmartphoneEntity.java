@@ -672,6 +672,7 @@ public class SmartphoneEntity {
 //        se.deleteSmartphone("ip20");
 //        System.out.println(se.sortByDate("ip", 7).size());
 //        System.out.println(se.sortByPrice(5).get(0));
+        System.out.println(se.getAllSmartphone());
     }
 
 

@@ -153,7 +153,6 @@ public class AccountEntity {
 //        System.out.println(getListAccountForMATK("ad"));
 //        System.out.println(ae.getListMATK("ad"));
 //        System.out.println(ae.createAccount("huong123", "huong123@gmail.com", "huong123", "Nguyen Xuan Huong"));
-        System.out.println(ae.checkAccountForUsername("khang"));
-        System.out.println(ae.checkAccountForGmail("khangtran0944@gmail.com"));
+        System.out.println();
     }
 }

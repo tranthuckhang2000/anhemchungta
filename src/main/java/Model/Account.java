@@ -20,6 +20,7 @@ public class Account {
     private String ho_va_ten;
     private int quyen_truy_cap;
 
+
     public Account(String matk, String ten_dang_nhap, String gmail, String mat_khau, String ho_va_ten, int quyen_truy_cap
     ) {
         this.matk = matk;
