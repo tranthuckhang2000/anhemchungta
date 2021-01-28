@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Group-Project:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Group-Project</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Group-Project-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Group-Project:war exploded" />
+    </root>
+  </artifact>
+</component>
