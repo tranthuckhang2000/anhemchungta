@@ -24,91 +24,12 @@
 
 <body>
 <%@include file="header.jsp" %>
-<!-- banner -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <!-- Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item item1 active">
-            <div class="container">
-                <div class="w3l-space-banner">
-                    <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p>Hoàn Tiền Lên Đến
-                            <span>10%</span></p>
-                        <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Iphone
-                            <span>Giá </span>
-                            Tốt
-                        </h3>
-                        <a class="button2" href="iphone.jsp">Mua Ngay </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item item2">
-            <div class="container">
-                <div class="w3l-space-banner">
-                    <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p>Nâng Cao
-                            <span>Hiệu Suất</span> Hoạt Động</p>
-                        <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Siêu Máy Tính
-                            <span>Macbook Pro</span>
-                        </h3>
-                        <a class="button2" href="iphone.jsp">Mua Ngay </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item item3">
-            <div class="container">
-                <div class="w3l-space-banner">
-                    <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p>Hoàn Tiền
-                            <span>Lên Đến 10%</span></p>
-                        <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Tiêu Chuẩn
-                            <span>Mới</span>
-                        </h3>
-                        <a class="button2" href="../../macbook.html">Mua Ngay</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item item4">
-            <div class="container">
-                <div class="w3l-space-banner">
-                    <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p>Nhận Ngay
-                            <span>Phiếu Giảm Giá 10%</span></p>
-                        <h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Ngay Trong
-                            <span>Hôm Nay</span>
-                        </h3>
-                        <a class="button2" href="../../macbook13.6.html">Mua Ngay </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<!-- //banner -->
-
 <div class="services-breadcrumb">
     <div class="agile_inner_breadcrumb">
         <div class="container">
             <ul class="w3_short">
                 <li>
-                    <a href="yyy.html">Trang chủ</a>
+                    <a href="Home">Trang chủ</a>
                     <i>|</i>
                 </li>
                 <li>Giỏ hàng</li>
@@ -131,101 +52,60 @@
             <h4 class="mb-sm-4 mb-3">Đơn hàng của bạn:
                 <span>3 sản phẩm</span>
             </h4>
-            <div class="table-responsive">
-                <table class="timetable_sub">
-                    <thead>
-                    <tr>
-                        <th>STT.</th>
-                        <th>Sản Phẩm</th>
-                        <th>Số Lượng</th>
-                        <th>Tên Sản Phẩm</th>
-                        <th>Giá</th>
-                        <th>Xóa</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="rem1">
-                        <td class="invert">1</td>
-                        <td class="invert-image">
-                            <a href="macbook13.6.html">
-                                <img src="images/iphone/iphone_7/iphone-7-silver.jpg" alt=" " class="img-responsive">
-                            </a>
-                        </td>
-                        <td class="invert">
-                            <div class="quantity">
-                                <div class="quantity-select">
-                                    <div class="entry value-minus">&nbsp;</div>
-                                    <div class="entry value">
-                                        <span>1</span>
-                                    </div>
-                                    <div class="entry value-plus active">&nbsp;</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="white-box">
+                        <div class="checkout-right">
+
+                            <div class="table-responsive mg-elm">
+                                <table class="timetable_sub">
+                                    <thead>
+                                    <tr>
+                                        <th>Sản Phẩm</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Số Lượng</th>
+                                        <th>Giá</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${cart.data()}" var="d">
+                                        <tr class="rem1">
+                                            <td class="invert-image">
+                                                <a href="#">
+                                                    <img src="${d.hinh_mo_ta_1}" alt=" "
+                                                         class="img-responsive">
+                                                </a>
+                                            </td>
+                                            <td class="invert">${d.ten_san_pham}</td>
+                                            <td class="invert">
+                                                <div class="quantity">
+                                                    <div class="quantity-select">
+                                                        <span>${d.so_luong}</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="invert">${d.gia}<u>đ</u></td>
+                                            </td>
+                                                <%--                                            <td class="invert"><i  class="fas fa-edit"></i>--%>
+                                                <%--                                            </td>--%>
+                                            <td class="invert">
+                                                <div class="rem">
+                                                    <a href="DetailDelete?idProduct=${d.masp}" style = "color: gray">
+                                                        <i style="font-size: 30px" class="fas fa-trash-alt"></i></a>
+                                                </div>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                                <div class="mg-elm">
+
                                 </div>
                             </div>
-                        </td>
-                        <td class="invert">iphone 7 32GB Silver</td>
-                        <td class="invert">5.590.00<u>đ</u></td>
-                        <td class="invert">
-                            <div class="rem">
-                                <div class="close1"> </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="rem2">
-                        <td class="invert">2</td>
-                        <td class="invert-image">
-                            <a href="macbook13.6.html">
-                                <img src="images/macbook/macbook13/macbook5.3.jpg" alt=" " class="img-responsive">
-                            </a>
-                        </td>
-                        <td class="invert">
-                            <div class="quantity">
-                                <div class="quantity-select">
-                                    <div class="entry value-minus">&nbsp;</div>
-                                    <div class="entry value">
-                                        <span>1</span>
-                                    </div>
-                                    <div class="entry value-plus active">&nbsp;</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="invert">Macbook pro 13inch</td>
-                        <td class="invert">32.990.000<u>đ</u></td>
-                        <td class="invert">
-                            <div class="rem">
-                                <div class="close2"> </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="rem3">
-                        <td class="invert">3</td>
-                        <td class="invert-image">
-                            <a href="macbook13.6.html">
-                                <img src="images/ipad/iPad%20Air%201%20Wifi%20Cellular/ipad-air-1-silver.jpg" alt=" " class="img-responsive">
-                            </a>
-                        </td>
-                        <td class="invert">
-                            <div class="quantity">
-                                <div class="quantity-select">
-                                    <div class="entry value-minus">&nbsp;</div>
-                                    <div class="entry value">
-                                        <span>1</span>
-                                    </div>
-                                    <div class="entry value-plus active">&nbsp;</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="invert">ipad air 2</td>
-                        <td class="invert">4.990.000<u>đ</u></td>
-                        <td class="invert">
-                            <div class="rem">
-                                <div class="close3"> </div>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        </div>
         <div class="checkout-left">
             <div class="address_form_agile mt-sm-5 mt-4">
                 <h4 class="mb-sm-4 mb-3">Thêm thông tin</h4>

@@ -190,7 +190,7 @@
                                 <input type="hidden" name="currency_code" value="đ" />
                                 <input type="hidden" name="return" value=" " />
                                 <input type="hidden" name="cancel_return" value=" " />
-                                <input type="submit" name="submit" value="Add to cart" class="button" />
+                                <input type="submit" name="submit" href="" value="Thêm Vào Giỏ Hàng" class="button" />
                             </fieldset>
                         </form>
                     </div>

@@ -379,6 +379,25 @@
 
     });
 </script>
+
+<script>
+    function formatVND(element) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(element);
+    }
+
+    let arrayprice = document.getElementsByClassName("item_price");
+    for (let i = 0; i < arrayprice.length; i++)
+        arrayprice[i].innerHTML = formatVND(arrayprice[i].innerHTML)
+
+    let arraydiscount = document.getElementsByClassName("item_discount");
+    for (let i = 0; i < arraydiscount.length; i++) {
+        arraydiscount[i].innerHTML = Number.parseFloat(arraydiscount[i].innerHTML).toFixed(0);
+        arraydiscount[i].innerHTML = formatVND(arraydiscount[i].innerHTML)
+    }
+</script>
 <!-- //smooth-scrolling-of-move-up -->
 
 <!-- for bootstrap working -->
