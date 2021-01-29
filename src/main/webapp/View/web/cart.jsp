@@ -50,7 +50,7 @@
         <!-- //tittle heading -->
         <div class="checkout-right">
             <h4 class="mb-sm-4 mb-3">Đơn hàng của bạn:
-                <span>3 sản phẩm</span>
+                <span>${cart.count()} &nbsp;sản phẩm</span>
             </h4>
             <div class="row">
                 <div class="col-md-12">
@@ -65,7 +65,7 @@
                                         <th>Tên Sản Phẩm</th>
                                         <th>Số Lượng</th>
                                         <th>Giá</th>
-                                        <th></th>
+                                        <th>Xóa</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -91,12 +91,14 @@
                                                 <%--                                            </td>--%>
                                             <td class="invert">
                                                 <div class="rem">
-                                                    <a href="DetailDelete?idProduct=${d.masp}" style = "color: gray">
+                                                    <a href="DetailDelete?idProduct=${d.masp}" style="color: gray">
                                                         <i style="font-size: 30px" class="fas fa-trash-alt"></i></a>
                                                 </div>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
+                                    <h4 class="mb-sm-4 mb-3">Tổng Thanh Toán: &nbsp; ${cart.total()} </h4>
+
                                 </table>
                                 <div class="mg-elm">
 
@@ -105,57 +107,41 @@
                         </div>
                     </div>
                 </div>
-            </div>        </div>
+            </div>
+        </div>
         <div class="checkout-left">
             <div class="address_form_agile mt-sm-5 mt-4">
                 <h4 class="mb-sm-4 mb-3">Thêm thông tin</h4>
-                <form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
+                <form action="Pay" method="post" class="creditly-card-form agileinfo_form">
                     <div class="creditly-wrapper wthree, w3_agileits_wrapper">
                         <div class="information-wrapper">
                             <div class="first-row">
-                                <div class="controls form-group">
-                                    <input class="billing-address-name form-control" type="text" name="name" placeholder="Tên đầy đủ..." required="">
-                                </div>
                                 <div class="w3_agileits_card_number_grids">
                                     <div class="w3_agileits_card_number_grid_left form-group">
                                         <div class="controls">
-                                            <input type="text" class="form-control" placeholder="Số điện thoại..." name="number" required="">
+                                            <input type="text" class="form-control" placeholder="Số điện thoại..."
+                                                   name="sdt" required="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="controls form-group">
-                                    <input type="text" class="form-control" placeholder="Thị xã" name="town" required="">
+                                    <input type="text" class="form-control" placeholder="Địa chỉ" name="dia_chi" required="">
                                 </div>
-                                <div class="controls form-group">
-                                    <input type="text" class="form-control" placeholder="Quận/Huyện" name="district" required="">
-                                </div>
-                                <div class="controls form-group">
-                                    <input type="text" class="form-control" placeholder="Tỉnh/Thành phố" name="city" required="">
-                                </div>
-                                <div class="controls form-group">
-                                    <select class="option-w3ls">
-                                        <option>Chọn loại địa chỉ</option>
-                                        <option>Công ty</option>
-                                        <option>Nhà ở</option>
-                                        <!--											<option>Commercial</option>-->
 
-                                    </select>
-                                </div>
+                                <div class="controls form-group">
+                                    <input class="form-control" type="radio" id="cod" name="thanh_toan" value="tt1001">
+                                    <label class="form-control" for="cod">Ship COD</label><br>
+                                    <input class="form-control" type="radio" id="atm" name="thanh_toan" value="tt1002">
+                                    <label class="form-control" for="atm">Chuyển khoảng</label><br></div>
                             </div>
-                            <button class="submit check_out btn">Giao hàng đến địa chỉ này</button>
+                            <button class="submit check_out btn">Đặt Hàng</button>
                         </div>
                     </div>
                 </form>
-                <div class="checkout-right-basket">
-                    <a href="payment.html">Tiến hành thanh toán
-                        <span class="far fa-hand-point-right"></span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
 </div>
-
 
 
 <!-- middle section -->

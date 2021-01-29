@@ -71,7 +71,9 @@
                                                         <input type="hidden" name="masp" value="${d.masp}" />
                                                         <input type="hidden" name="amount" value="${d.gia}.toLocaleString()" />
 <%--                                                        <a href="?idProduct=${d.masp}" class="link-product-add-cart">Xem Nhanh</a>--%>
-                                                        <button type="submit" class="btn button">Them Vqo Gio Hang</button>
+<%--                                                        <button type="submit" class="btn button">Them Vqo Gio Hang</button>--%>
+                                                        <input type="submit" name="submit" value="Thêm Vào Giỏ Hàng" class="button btn" />
+
                                                     </fieldset>
                                                 </form>
                                             </div>

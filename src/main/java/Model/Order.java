@@ -1,26 +1,27 @@
 package Model;
 
-import java.util.List;
-
 public class Order {
     private String madh;
     private String matk;
     private String matt;
-    private String maShip;
-    private String ngaydat;
-    private String ngaygiao;
-    private int trang_thai;
+    private String ngay_dat;
+    private String ngay_giao;
+    private String trang_thai;
     private int tong_tien;
+    private String sdt;
+    private String dia_chi;
 
-    public Order(String madh, String matk, String matt, String maShip, String ngaydat, String ngaygiao, int trang_thai, int tong_tien) {
+
+    public Order(String madh, String matk, String matt, String ngay_dat, String ngay_giao, String trang_thai, int tong_tien, String sdt, String dia_chi) {
         this.madh = madh;
         this.matk = matk;
         this.matt = matt;
-        this.maShip = maShip;
-        this.ngaydat = ngaydat;
-        this.ngaygiao = ngaygiao;
+        this.ngay_dat = ngay_dat;
+        this.ngay_giao = ngay_giao;
         this.trang_thai = trang_thai;
         this.tong_tien = tong_tien;
+        this.sdt = sdt;
+        this.dia_chi = dia_chi;
     }
 
     public String getMadh() {
@@ -47,35 +48,27 @@ public class Order {
         this.matt = matt;
     }
 
-    public String getMaShip() {
-        return maShip;
+    public String getNgay_dat() {
+        return ngay_dat;
     }
 
-    public void setMaShip(String maShip) {
-        this.maShip = maShip;
+    public void setNgay_dat(String ngay_dat) {
+        this.ngay_dat = ngay_dat;
     }
 
-    public String getNgaydat() {
-        return ngaydat;
+    public String getNgay_giao() {
+        return ngay_giao;
     }
 
-    public void setNgaydat(String ngaydat) {
-        this.ngaydat = ngaydat;
+    public void setNgay_giao(String ngay_giao) {
+        this.ngay_giao = ngay_giao;
     }
 
-    public String getNgaygiao() {
-        return ngaygiao;
-    }
-
-    public void setNgaygiao(String ngaygiao) {
-        this.ngaygiao = ngaygiao;
-    }
-
-    public int getTrang_thai() {
+    public String getTrang_thai() {
         return trang_thai;
     }
 
-    public void setTrang_thai(int trang_thai) {
+    public void setTrang_thai(String trang_thai) {
         this.trang_thai = trang_thai;
     }
 
@@ -87,18 +80,34 @@ public class Order {
         this.tong_tien = tong_tien;
     }
 
+    public String getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
+    }
+
+    public String getDia_chi() {
+        return dia_chi;
+    }
+
+    public void setDia_chi(String dia_chi) {
+        this.dia_chi = dia_chi;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
                 "madh='" + madh + '\'' +
                 ", matk='" + matk + '\'' +
                 ", matt='" + matt + '\'' +
-                ", maShip='" + maShip + '\'' +
-                ", ngaydat='" + ngaydat + '\'' +
-                ", ngaygiao='" + ngaygiao + '\'' +
-                ", trang_thai=" + trang_thai +
+                ", ngay_dat='" + ngay_dat + '\'' +
+                ", ngay_giao='" + ngay_giao + '\'' +
+                ", trang_thai='" + trang_thai + '\'' +
                 ", tong_tien=" + tong_tien +
+                ", sdt='" + sdt + '\'' +
+                ", dia_chi='" + dia_chi + '\'' +
                 '}';
     }
 }
-

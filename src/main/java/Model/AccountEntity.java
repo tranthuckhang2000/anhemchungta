@@ -144,6 +144,59 @@ public class AccountEntity {
         return ac;
     }
 
+    public Account checkEmailAndUserName(String name, String email) {
+        PreparedStatement s = null;
+        String sql = "select * from account where ten_dang_nhap = ? and gmail=?";
+        try {
+            s = new ConnectionDB().connect(sql);
+            s.setString(1,name);
+            s.setString(2,email);
+            ResultSet rs = s.executeQuery();
+            while (rs.next()) {
+                return new Account(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public Account checkAccountExist(String user) {
+        PreparedStatement s = null;
+        String sql = "select * from account where ten_dang_nhap = ?";
+        try {
+            s = new ConnectionDB().connect(sql);
+            s.setString(1, user);
+            ResultSet rs = s.executeQuery();
+            while (rs.next()) {
+                return new Account(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getInt(6));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+
+    }
+
+    public Account editpass(String username, String password) {
+        PreparedStatement s = null;
+        String sql = "update account set mat_khau=? where ten_dang_nhap=?";
+        try {
+            s = new ConnectionDB().connect(sql);
+            s.setString(1, password);
+            s.setString(2, username);
+            s.executeUpdate();
+            s.close();
+            return null;
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //        System.out.println(getListAccount());
 //        System.out.println( login("khang", "khang123"));

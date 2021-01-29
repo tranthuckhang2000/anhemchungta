@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 
@@ -22,24 +22,26 @@
           content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
     <title>Tổng Quan</title>
-    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/"/>
     <!-- Favicon icon -->
     <!--    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">-->
     <!-- Custom-Files -->
-    <link href="<c:url value ='/decorator/web/bootstrap.css'/>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<c:url value ='/decorator/web/bootstrap.css'/>" rel="stylesheet" type="text/css" media="all"/>
     <!-- Bootstrap css -->
-    <link href="<c:url value='/decorator/web/style.css'/>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<c:url value='/decorator/web/style.css'/>" rel="stylesheet" type="text/css" media="all"/>
     <!--     Main css-->
     <link rel="stylesheet" href="<c:url value='/decorator/web/fontawesome-all.css'/>">
     <!--     Font-Awesome-Icons-CSS-->
-    <link href="<c:url value='//decorator/webpopuo-box.css'/>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<c:url value='//decorator/webpopuo-box.css'/>" rel="stylesheet" type="text/css" media="all"/>
     <!--     pop-up-box-->
-    <link href="<c:url value='/decorator/web/menu.css'/>" rel="stylesheet" type="text/css" media="all" />
+    <link href="<c:url value='/decorator/web/menu.css'/>" rel="stylesheet" type="text/css" media="all"/>
     <!--     menu style-->
 
     <!-- Custom CSS -->
-    <link href="<c:url value='/decorator/admin/plugins/bower_components/chartist/dist/chartist.min.css'/>" rel="stylesheet">
-    <link rel="stylesheet" href="<c:url value='/decorator/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css'/>">
+    <link href="<c:url value='/decorator/admin/plugins/bower_components/chartist/dist/chartist.min.css'/>"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="<c:url value='/decorator/admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css'/>">
     <!-- Custom CSS -->
 
     <link href="<c:url value='/decorator/admin/css/style.css'/>" rel="stylesheet">
@@ -48,8 +50,12 @@
     <%--    <link href="/css/admin/css/style.css" rel="stylesheet">--%>
     <%--    <link href="/css/admin/css/style.min.css" rel="stylesheet">--%>
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
+          integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css"
+          integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -70,7 +76,7 @@
     <!-- ============================================================== -->
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <%@include file="header.jsp"%>
+    <%@include file="header.jsp" %>
     <!-- ============================================================== -->
     <!-- End Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
@@ -110,8 +116,9 @@
                         <h3 class="box-title">Tổng khách ghé thăm</h3>
                         <ul class="list-inline two-part d-flex align-items-center mb-0">
                             <li>
-                                <div id="sparklinedash"><canvas width="67" height="30"
-                                                                style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                <div id="sparklinedash">
+                                    <canvas width="67" height="30"
+                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
                                 </div>
                             </li>
                             <li class="ml-auto"><span class="counter text-success">659</span></li>
@@ -123,8 +130,9 @@
                         <h3 class="box-title">tổng lượt truy cập</h3>
                         <ul class="list-inline two-part d-flex align-items-center mb-0">
                             <li>
-                                <div id="sparklinedash2"><canvas width="67" height="30"
-                                                                 style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                <div id="sparklinedash2">
+                                    <canvas width="67" height="30"
+                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
                                 </div>
                             </li>
                             <li class="ml-auto"><span class="counter text-purple">1269</span></li>
@@ -136,8 +144,9 @@
                         <h3 class="box-title">tổng truy cập duy nhất</h3>
                         <ul class="list-inline two-part d-flex align-items-center mb-0">
                             <li>
-                                <div id="sparklinedash3"><canvas width="67" height="30"
-                                                                 style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                <div id="sparklinedash3">
+                                    <canvas width="67" height="30"
+                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
                                 </div>
                             </li>
                             <li class="ml-auto"><span class="counter text-info">911</span>
@@ -226,8 +235,9 @@
                         <h3 class="box-title mb-0">bình luận gần đây</h3>
                         <div class="comment-center">
                             <div class="comment-body d-flex">
-                                <div class="user-img"> <img src="/css/admin/plugins/images/users/pawandeep.jpg" alt="user"
-                                                            class="img-circle">
+                                <div class="user-img"><img src="/css/admin/plugins/images/users/pawandeep.jpg"
+                                                           alt="user"
+                                                           class="img-circle">
                                 </div>
                                 <div class="mail-contnet">
                                     <h5>Quốc Anh</h5><span class="time">10:20 AM 20/05/2020</span>
@@ -244,8 +254,8 @@
                                 </div>
                             </div>
                             <div class="comment-body d-flex">
-                                <div class="user-img"> <img src="/css/admin/plugins/images/users/sonu.jpg" alt="user"
-                                                            class="img-circle">
+                                <div class="user-img"><img src="/css/admin/plugins/images/users/sonu.jpg" alt="user"
+                                                           class="img-circle">
                                 </div>
                                 <div class="mail-contnet">
                                     <h5>Hoàn Anh</h5><span class="time">10:20 AM 19/05/2020</span>
@@ -256,8 +266,8 @@
                                 </div>
                             </div>
                             <div class="comment-body d-flex border-0">
-                                <div class="user-img"> <img src="/css/admin/plugins/images/users/arijit.jpg" alt="user"
-                                                            class="img-circle">
+                                <div class="user-img"><img src="/css/admin/plugins/images/users/arijit.jpg" alt="user"
+                                                           class="img-circle">
                                 </div>
                                 <div class="mail-contnet">
                                     <h5>Như Ngọc</h5><span class="time">10:20 AM 12/04/2016</span>
@@ -287,47 +297,15 @@
                                         </button>
                                     </div>
                                     <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                            src="/css/admin/plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
+                                            src="/css/admin/plugins/images/users/varun.jpg" alt="user-img"
+                                            class="img-circle">
                                         <div class="ml-2">
                                                 <span class="text-dark text-muted">Hoàn Anh <small
                                                         class="d-block text-success d-block">trực tuyến</small></span>
                                         </div>
                                     </a>
                                 </li>
-                                <!--                                    <li>-->
-                                <!--                                        <div class="call-chat">-->
-                                <!--                                            <button class="btn btn-success text-white btn-circle btn" type="button">-->
-                                <!--                                                <i class="fas fa-phone"></i>-->
-                                <!--                                            </button>-->
-                                <!--                                            <button class="btn btn-info btn-circle btn" type="button">-->
-                                <!--                                                <i class="far fa-comments"></i>-->
-                                <!--                                            </button>-->
-                                <!--                                        </div>-->
-                                <!--                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img-->
-                                <!--                                                src="plugins/images/users/genu.jpg" alt="user-img" class="img-circle">-->
-                                <!--                                            <div class="ml-2">-->
-                                <!--                                                <span class="text-dark text-muted">Hoàn Hà-->
-                                <!--                                                    Deshmukh <small class="d-block text-warning">gtgtr</small></span>-->
-                                <!--                                            </div>-->
-                                <!--                                        </a>-->
-                                <!--                                    </li>-->
-                                <!--                                    <li>-->
-                                <!--                                        <div class="call-chat">-->
-                                <!--                                            <button class="btn btn-success text-white btn-circle btn" type="button">-->
-                                <!--                                                <i class="fas fa-phone"></i>-->
-                                <!--                                            </button>-->
-                                <!--                                            <button class="btn btn-info btn-circle btn" type="button">-->
-                                <!--                                                <i class="far fa-comments"></i>-->
-                                <!--                                            </button>-->
-                                <!--                                        </div>-->
-                                <!--                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img-->
-                                <!--                                                src="plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle">-->
-                                <!--                                            <div class="ml-2">-->
-                                <!--                                                <span class="text-dark text-muted">Ritesh-->
-                                <!--                                                    Deshmukh <small class="d-block text-danger">Busy</small></span>-->
-                                <!--                                            </div>-->
-                                <!--                                        </a>-->
-                                <!--                                    </li>-->
+                               </li>-->
                                 <li>
                                     <div class="call-chat">
                                         <button class="btn btn-success text-white btn-circle btn" type="button">
@@ -338,7 +316,8 @@
                                         </button>
                                     </div>
                                     <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                            src="/css/admin/plugins/images/users/arijit.jpg" alt="user-img" class="img-circle">
+                                            src="/css/admin/plugins/images/users/arijit.jpg" alt="user-img"
+                                            class="img-circle">
                                         <div class="ml-2">
                                                 <span class="text-dark text-muted">Như Ngọc
                                                     Sinh <small class="d-block text-muted">ngoại tuyến</small></span>
@@ -373,9 +352,11 @@
                                         </button>
                                     </div>
                                     <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                            src="/css/admin/plugins/images/users/hritik.jpg" alt="user-img" class="img-circle">
+                                            src="/css/admin/plugins/images/users/hritik.jpg" alt="user-img"
+                                            class="img-circle">
                                         <div class="ml-2">
-                                            <span class="text-dark text-muted">Hải Anh<small class="d-block text-success">online</small></span>
+                                            <span class="text-dark text-muted">Hải Anh<small
+                                                    class="d-block text-success">online</small></span>
                                         </div>
                                     </a>
                                 </li>
@@ -389,7 +370,8 @@
                                         </button>
                                     </div>
                                     <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                            src="/css/admin/plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
+                                            src="/css/admin/plugins/images/users/varun.jpg" alt="user-img"
+                                            class="img-circle">
                                         <div class="ml-2">
                                                 <span class="text-dark text-muted">Varun
                                                     Dhavan <small class="d-block text-success">online</small></span>
@@ -407,7 +389,7 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
-        <%@include file="footer.jsp"%>
+        <%@include file="footer.jsp" %>
         <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->

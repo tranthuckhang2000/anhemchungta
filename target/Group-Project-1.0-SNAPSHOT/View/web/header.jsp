@@ -71,7 +71,7 @@
 
                     <c:if test="${sessionScope.acc!=null}">
                         <li class="text-center border-right text-white">
-                            <a href="" class="text-white">
+                            <a href="LogoutControl" class="text-white">
                                 <i class="fas fa-sign-in-alt mr-2 color-log"></i>Đăng Xuất</a>
                         </li>
                     </c:if>
@@ -128,15 +128,11 @@
                     <!-- cart details -->
                     <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
                         <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                            <a href="">
-                                <!-- <form action="#" method="post" class="last"> -->
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="display" value="1">
+                                 <form action="MyCart" method="post">
                                 <button class="btn w3view-cart" type="submit" name="submit" value="">
                                     <i class="fas fa-cart-arrow-down"></i>
                                 </button>
-                                <!-- </form> -->
-                            </a>
+                                 </form>
                         </div>
                     </div>
                     <!-- //cart details -->

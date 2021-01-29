@@ -19,6 +19,7 @@ public class Account {
     private String mat_khau;
     private String ho_va_ten;
     private int quyen_truy_cap;
+    private String key;
 
 
     public Account(String matk, String ten_dang_nhap, String gmail, String mat_khau, String ho_va_ten, int quyen_truy_cap
@@ -30,6 +31,22 @@ public class Account {
         this.ho_va_ten = ho_va_ten;
         this.quyen_truy_cap = quyen_truy_cap
         ;
+    }
+
+    public Account(){
+    }
+    public Account(String ten_dang_nhap, String gmail, String key) {
+        this.ten_dang_nhap = ten_dang_nhap;
+        this.gmail = gmail;
+        this.key = key;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
 
@@ -114,6 +131,8 @@ public class Account {
         String result = array[0] + array[1];
         return result;
     }
+
+
 
     public int getQuyen_truy_cap() {
         return quyen_truy_cap;

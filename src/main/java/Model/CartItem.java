@@ -1,11 +1,22 @@
 package Model;
 
 public class CartItem {
+    private String mactdh;
+    private String madh;
     private String masp;
     private String hinh_mo_ta_1;
     private String ten_san_pham;
     private int gia;
     private int so_luong;
+
+    public CartItem(String masp, String hinh_mo_ta_1, String ten_san_pham, int gia, int so_luong) {
+         this.masp = masp;
+         this.hinh_mo_ta_1 = hinh_mo_ta_1;
+         this.ten_san_pham = ten_san_pham;
+         this.gia = gia;
+         this.so_luong = so_luong;
+
+    }
 
 //    gia;
 
@@ -17,7 +28,8 @@ public class CartItem {
         this.ten_san_pham = ten_san_pham;
     }
 
-    public CartItem(String masp, String hinh_mo_ta_1, String ten_san_pham, int gia, int so_luong) {
+    public CartItem(String mactdh, String masp, String hinh_mo_ta_1, String ten_san_pham, int gia, int so_luong) {
+        this.mactdh = mactdh;
         this.masp = masp;
         this.hinh_mo_ta_1 = hinh_mo_ta_1;
         this.ten_san_pham = ten_san_pham;
@@ -67,5 +79,33 @@ public class CartItem {
 
     public void add() {
         this.so_luong++;
+    }
+
+    public String getMactdh() {
+        return mactdh;
+    }
+
+    public void setMactdh(String mactdh) {
+        this.mactdh = mactdh;
+    }
+
+    public String getMadh() {
+        return madh;
+    }
+
+    public void setMadh(String madh) {
+        this.madh = madh;
+    }
+
+    @Override
+    public String toString() {
+        return "CartItem{" +
+                "mactdh='" + mactdh + '\'' +
+                ", masp='" + masp + '\'' +
+                ", hinh_mo_ta_1='" + hinh_mo_ta_1 + '\'' +
+                ", ten_san_pham='" + ten_san_pham + '\'' +
+                ", gia=" + gia +
+                ", so_luong=" + so_luong +
+                '}';
     }
 }

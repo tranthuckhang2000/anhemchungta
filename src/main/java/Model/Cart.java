@@ -10,6 +10,7 @@ public class Cart {
 
     public Cart() {
 
+
     }
 
     public CartItem put(CartItem item) {
@@ -40,12 +41,27 @@ public class Cart {
             total += item.getSo_luong() * item.getGia();
         return total;
     }
+    public long count() {
+        long total = 0;
+        for (CartItem item : cart.values())
+            total += item.getSo_luong();
+        return total;
+    }
 
     public int size() {
         int size = 0;
         for (CartItem item : cart.values())
             size += item.getSo_luong();
         return size;
+    }
+
+
+    public Map<String, CartItem> getCart() {
+        return cart;
+    }
+
+    public void setCart(Map<String, CartItem> cart) {
+        this.cart = cart;
     }
 
     public Collection<CartItem> data() {

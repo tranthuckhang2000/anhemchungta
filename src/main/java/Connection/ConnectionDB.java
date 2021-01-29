@@ -40,6 +40,18 @@ public class ConnectionDB<a> {
 
     }
 
+    public static PreparedStatement connect(String sql) throws SQLException, ClassNotFoundException {
+        if (con==null||con.isClosed()){
+            Class.forName("com.mysql.jdbc.Driver");
+            con= DriverManager.getConnection("jdbc:mysql://localhost:3306/GroupWeb?useUnicode=true&characterEncoding=utf-8","root","");
+            return con.prepareStatement(sql);
+        }
+        else {
+            return con.prepareStatement(sql);
+        }
+
+    }
+
     public static void main(String[] args) throws Exception {
         String ten_dang_nhap = "khang";
         Connection conn = getConnection();

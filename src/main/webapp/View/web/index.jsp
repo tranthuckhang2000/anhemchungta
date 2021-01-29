@@ -190,7 +190,7 @@
                                                 <del>${d.gia_khuyen_mai}</del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                                <form action="#" method="post">
+                                                <form action="AddToCart" method="post">
                                                     <fieldset>
                                                         <input type="hidden" name="cmd" value="_cart" />
                                                         <input type="hidden" name="add" value="1" />
