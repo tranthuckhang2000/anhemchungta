@@ -266,8 +266,28 @@ public class CartEntity {
         c1.roll(Calendar.DATE, 2);
 //        String ngaygiao = String.valueOf(c1.getTime(DATE));
         System.out.println();
-       String ngaygiao = c1.get(Calendar.DATE) + "/" + c1.get(Calendar.MONTH) + "/" + c1.get(Calendar.YEAR);
+       String ngaygiao = c1.get(Calendar.DATE) + "-" + c1.get(Calendar.MONTH) + "-" + c1.get(Calendar.YEAR);
         return  ngaygiao;
+    }
+
+    public List<Order> getListOrder() throws SQLException {
+        List<Order> list = new ArrayList<>();
+        String sql = "select * from don_hang";
+        ps = con.prepareStatement(sql);
+        rs = ps.executeQuery();
+        while (rs.next()){
+            list.add(new Order(rs.getString(1),
+                               rs.getString(2),
+                               rs.getString(3),
+                               rs.getString(4),
+                               rs.getString(5),
+                               rs.getString(6),
+                               rs.getInt(7),
+                               rs.getString(8),
+                               rs.getString(9)
+                    ));
+        }
+        return list;
     }
 
 
@@ -280,10 +300,10 @@ public class CartEntity {
 ////        System.out.println(od.createNewMACTDH());
         CartItem c = new CartItem("1003", "10003", "10003", "10003", 2, 3);
 //        od.insertCTDH(c, "hhhh");
-        od.insertDH("123", "123", "123", "123", "123", 123, "123", "123");
+//        od.insertDH("123", "123", "123", "123", "123", 123, "123", "123");
 //        System.out.println(od.createNewMACTDH());
 //        System.out.println(od.createNewMACTDH());
-
+        System.out.println(od.getListOrder());
     }
 
 }

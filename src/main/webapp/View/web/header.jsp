@@ -394,6 +394,7 @@
         arraydiscount[i].innerHTML = formatVND(arraydiscount[i].innerHTML)
     }
 </script>
+
 <!-- //smooth-scrolling-of-move-up -->
 
 <!-- for bootstrap working -->

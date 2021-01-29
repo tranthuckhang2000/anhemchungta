@@ -137,22 +137,19 @@
                                                 <a href="../../macbook13.6.html">${d.ten_san_pham}</a>
                                             </h4>
                                             <div class="info-product-price my-2">
-                                                <span class="item_price">${d.gia}<u>đ</u></span>
-                                                <del>${d.gia_khuyen_mai}</del>
+                                                <span class="item_price">${d.gia}</span>
+                                                <del class="item_discount">${d.gia_khuyen_mai}</del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-                                                <form action="#" method="post">
+                                                <form action="AddToCart" method="post">
                                                     <fieldset>
-                                                        <input type="hidden" name="cmd" value="_cart" />
-                                                        <input type="hidden" name="add" value="1" />
-                                                        <input type="hidden" name="business" value=" " />
                                                         <input type="hidden" name="item_name" value="${d.ten_san_pham}" />
+                                                        <input type="hidden" name="masp" value="${d.masp}" />
                                                         <input type="hidden" name="amount" value="${d.gia}.toLocaleString()" />
-                                                        <input type="hidden" name="discount_amount" value="1.00" />
-                                                        <input type="hidden" name="currency_code" value="đ" />
-                                                        <input type="hidden" name="return" value=" " />
-                                                        <input type="hidden" name="cancel_return" value=" " />
+                                                            <%--                                                        <a href="?idProduct=${d.masp}" class="link-product-add-cart">Xem Nhanh</a>--%>
+                                                            <%--                                                        <button type="submit" class="btn button">Them Vqo Gio Hang</button>--%>
                                                         <input type="submit" name="submit" value="Thêm Vào Giỏ Hàng" class="button btn" />
+
                                                     </fieldset>
                                                 </form>
                                             </div>
@@ -186,22 +183,19 @@
                                                 <a href="../../macbook13.6.html">${d.ten_san_pham}</a>
                                             </h4>
                                             <div class="info-product-price my-2">
-                                                <span class="item_price">${d.gia}<u>đ</u></span>
-                                                <del>${d.gia_khuyen_mai}</del>
+                                                <span class="item_price">${d.gia}</span>
+                                                <del class="item_discount">${d.gia_khuyen_mai}</del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                                                 <form action="AddToCart" method="post">
                                                     <fieldset>
-                                                        <input type="hidden" name="cmd" value="_cart" />
-                                                        <input type="hidden" name="add" value="1" />
-                                                        <input type="hidden" name="business" value=" " />
                                                         <input type="hidden" name="item_name" value="${d.ten_san_pham}" />
+                                                        <input type="hidden" name="masp" value="${d.masp}" />
                                                         <input type="hidden" name="amount" value="${d.gia}.toLocaleString()" />
-                                                        <input type="hidden" name="discount_amount" value="1.00" />
-                                                        <input type="hidden" name="currency_code" value="đ" />
-                                                        <input type="hidden" name="return" value=" " />
-                                                        <input type="hidden" name="cancel_return" value=" " />
+                                                            <%--                                                        <a href="?idProduct=${d.masp}" class="link-product-add-cart">Xem Nhanh</a>--%>
+                                                            <%--                                                        <button type="submit" class="btn button">Them Vqo Gio Hang</button>--%>
                                                         <input type="submit" name="submit" value="Thêm Vào Giỏ Hàng" class="button btn" />
+
                                                     </fieldset>
                                                 </form>
                                             </div>
@@ -231,7 +225,24 @@
 <!-- footer -->
 <%@include file="footer.jsp" %>
 -->
+<script>
+    function formatVND(element) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(element);
+    }
 
+    let arraypricecc = document.getElementsByClassName("item_price");
+    for (let i = 0; i < arraypricecc.length; i++)
+        arraypricecc[i].innerHTML = formatVND(arraypricecc[i].innerHTML)
+
+    let arraydiscount1 = document.getElementsByClassName("item_discount");
+    for (let i = 0; i < arraydiscount1.length; i++) {
+        arraydiscount1[i].innerHTML = Number.parseFloat(arraydiscount1[i].innerHTML).toFixed(0);
+        arraydiscount1[i].innerHTML = formatVND(arraydiscount1[i].innerHTML)
+    }
+</script>
 
 </body>
 

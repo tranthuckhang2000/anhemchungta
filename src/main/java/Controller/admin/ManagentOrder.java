@@ -1,7 +1,8 @@
-package Controller.web;
+package Controller.admin;
 
+import Model.CartEntity;
+import Model.Order;
 import Model.Smartphone;
-import Model.SmartphoneEntity;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -11,23 +12,21 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Collections;
 
-@WebServlet(name = "Home", value = "/Home")
-public class Home extends HttpServlet {
+@WebServlet(name = "ManagentOrder", value = "/ManagentOrder")
+public class ManagentOrder extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SmartphoneEntity ie = new SmartphoneEntity();
         try {
-            Collection<Smartphone> values1 = ie.listSortByPrice(5);
-//            Collection<Smartphone> values2 = ie.listSortByDate(5);
-
-//            request.setAttribute("new_product", values2);
-//            request.setAttribute("best_price_product", values1);
-            request.getRequestDispatcher("View/web/index.jsp").forward(request, response);
-    } catch (SQLException throwables) {
+            CartEntity ce = new CartEntity();
+            Collection<Order> values = ce.getListOrder();
+            request.setAttribute("data", values);
+            request.getRequestDispatcher("View/admin/managentorder.jsp").forward(request, response);
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+
     }
 
     @Override

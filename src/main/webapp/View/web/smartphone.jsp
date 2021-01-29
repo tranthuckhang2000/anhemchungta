@@ -48,7 +48,7 @@
                                 <div class="col-md-4-5 product-men mt-5">
                                     <div class="men-pro-item simpleCart_shelfItem">
                                         <div class="men-thumb-item text-center">
-                                            <img class="img-size-pro" src="${d.hinh_mo_ta_1}"alt="">
+                                            <img class="img-size-pro" src="${d.hinh_mo_ta_2}"alt="">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro">
                                                     <a href="Product_Detail?idProduct=${d.masp}" class="link-product-add-cart">Xem Nhanh</a>
@@ -62,7 +62,7 @@
                                             </h4>
                                             <div class="info-product-price my-2">
                                                 <span class="item_price">${d.gia}</span>
-                                                <del>${d.gia_khuyen_mai}</del>
+                                                <del class="item_discount">${d.gia_khuyen_mai}</del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                                                 <form action="AddToCart" method="post">
@@ -104,14 +104,14 @@
         }).format(element);
     }
 
-    let arrayprice = document.getElementsByClassName("item_price");
-    for (let i = 0; i < arrayprice.length; i++)
-        arrayprice[i].innerHTML = formatVND(arrayprice[i].innerHTML)
+    let arraypricecc = document.getElementsByClassName("item_price");
+    for (let i = 0; i < arraypricecc.length; i++)
+        arraypricecc[i].innerHTML = formatVND(arraypricecc[i].innerHTML)
 
-    let arraydiscount = document.getElementsByClassName("item_discount");
-    for (let i = 0; i < arraydiscount.length; i++) {
-        arraydiscount[i].innerHTML = Number.parseFloat(arraydiscount[i].innerHTML).toFixed(0);
-        arraydiscount[i].innerHTML = formatVND(arraydiscount[i].innerHTML)
+    let arraydiscount1 = document.getElementsByClassName("item_discount");
+    for (let i = 0; i < arraydiscount1.length; i++) {
+        arraydiscount1[i].innerHTML = Number.parseFloat(arraydiscount1[i].innerHTML).toFixed(0);
+        arraydiscount1[i].innerHTML = formatVND(arraydiscount1[i].innerHTML)
     }
 </script>
 </body>

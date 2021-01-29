@@ -20,8 +20,8 @@ public class Mail {
         boolean test = false;
 
         String toEmail = user.getGmail();
-        String fromEmail = "haole7301@gmail.com";
-        String password = "uyitfhksvtsroczo";
+        String fromEmail = "khangtran0944@gmail.com";
+        String password = "ldoncltvtsckqibj";
 
 
         try {

@@ -459,7 +459,7 @@ public class SmartphoneEntity {
             }
         });
 
-       return listMASP.get(listMASP.size() - 1);
+        return listMASP.get(listMASP.size() - 1);
     }
     //    tạo một MSSP mới
     public String createNewMASP(String masp) throws SQLException, ClassNotFoundException {
@@ -643,7 +643,7 @@ public class SmartphoneEntity {
         }
         return newList;
     }
-//  tạo danh sach sản phẩm được sắp theo giá khuyến
+    //  tạo danh sach sản phẩm được sắp theo giá khuyến
     public List<Smartphone> listSortByPrice(int size) throws SQLException, ClassNotFoundException {
         List<Smartphone> list = getAllSmartphone();
         List<Smartphone> newList = new ArrayList<>();
@@ -672,7 +672,7 @@ public class SmartphoneEntity {
 //        se.deleteSmartphone("ip20");
 //        System.out.println(se.sortByDate("ip", 7).size());
 //        System.out.println(se.sortByPrice(5).get(0));
-        System.out.println(se.getAllSmartphone());
+        System.out.println(se.getAllIphone().get(1).getHinh_mo_ta_1());
     }
 
 

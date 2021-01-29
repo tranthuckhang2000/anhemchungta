@@ -85,7 +85,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="invert">${d.gia}<u>đ</u></td>
+                                            <td class="item_price">${d.gia}</td>
                                             </td>
                                                 <%--                                            <td class="invert"><i  class="fas fa-edit"></i>--%>
                                                 <%--                                            </td>--%>
@@ -97,7 +97,8 @@
                                         </tr>
                                     </c:forEach>
                                     </tbody>
-                                    <h4 class="mb-sm-4 mb-3">Tổng Thanh Toán: &nbsp; ${cart.total()} </h4>
+                                    <h4 class="mb-sm-4 mb-3">Tổng Thanh Toán: </h4>
+                                    <h4 class="item_price"> ${cart.total()}</h4>
 
                                 </table>
                                 <div class="mg-elm">
@@ -155,6 +156,24 @@
 <%@include file="footer.jsp" %>
 -->
 
+<script>
+    function formatVND(element) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(element);
+    }
+
+    let arraypricecc = document.getElementsByClassName("item_price");
+    for (let i = 0; i < arraypricecc.length; i++)
+        arraypricecc[i].innerHTML = formatVND(arraypricecc[i].innerHTML)
+
+    let arraydiscount1 = document.getElementsByClassName("item_discount");
+    for (let i = 0; i < arraydiscount1.length; i++) {
+        arraydiscount1[i].innerHTML = Number.parseFloat(arraydiscount1[i].innerHTML).toFixed(0);
+        arraydiscount1[i].innerHTML = formatVND(arraydiscount1[i].innerHTML)
+    }
+</script>
 
 </body>
 

@@ -402,7 +402,7 @@
         <div class="page-breadcrumb bg-white">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <h4 class="page-title text-uppercase font-medium font-14">Quản Lý Kho Hàng</h4>
+                    <h4 class="page-title text-uppercase font-medium font-14">Quản Lý Đơn Hàng</h4>
                 </div>
                 <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                     <div class="d-md-flex">
@@ -447,46 +447,20 @@
                                 <table class="timetable_sub">
                                     <thead>
                                     <tr>
-                                        <th>Sản Phẩm</th>
-                                        <th>Tên Sản Phẩm</th>
-                                        <th>Số Lượng</th>
-                                        <th>Giá</th>
-                                        <th>Sửa</th>
-                                        <th>Xóa</th>
+                                        <th>MADH</th>
+                                        <th>Ngày Giao</th>
+                                        <th>Ngày </th>
+                                        <th>Tổng Tiền</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <c:forEach items="${data}" var="d">
-                                        <tr class="rem1">
-                                            <td class="invert-image">
-                                                <a href="#">
-                                                    <img src="${d.hinh_mo_ta_1}" alt=" "
-                                                         class="img-responsive">
-                                                </a>
-                                            </td>
-                                            <td class="invert">${d.ten_san_pham}</td>
-                                            <td class="invert">
-                                                <div class="quantity">
-                                                    <div class="quantity-select">
-                                                        <span>${d.so_luong}</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="item_price invert">${d.gia}</td>
-                                            </td>
-                                                <%--                                            <td class="invert"><i  class="fas fa-edit"></i>--%>
-                                                <%--                                            </td>--%>
+                                            <td class="invert">${d.madh}</td>
+                                            <td class="invert">${d.ngay_dat}</td>
+                                            <td class="invert">${d.ngay_giao}</td>
+                                            <td class="item_price invert">${d.tong_tien}</td>
 
-                                            <td class="invert">
-                                                <div class="rem">
-                                                    <a href="ModifySmartphone?idProduct=${d.masp}" style = "color: gray">
-                                                        <i style="font-size: 30px" class="fa fa-edit"></i></a>
-                                                </div>
-                                            <td class="invert">
-                                                <div class="rem">
-                                                    <a href="DetailDelete?idProduct=${d.masp}" style = "color: gray">
-                                                        <i style="font-size: 30px" class="fas fa-trash-alt"></i></a>
-                                                </div>
+                                        </td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -552,8 +526,6 @@
 <!-- jquery -->
 <script src="<c:url value='/decorator/web/js/jquery-2.2.3.min.js'/>"></script>
 <!-- //jquery -->
-
-
 <script>
     function formatVND(element) {
         return new Intl.NumberFormat('vi-VN', {
@@ -571,6 +543,20 @@
         arraydiscount1[i].innerHTML = Number.parseFloat(arraydiscount1[i].innerHTML).toFixed(0);
         arraydiscount1[i].innerHTML = formatVND(arraydiscount1[i].innerHTML)
     }
+</script>
+
+<script>
+    function formatVND(element) {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(element);
+    }
+
+    let arrayprice = document.getElementsByClassName("item_price");
+    for (let i = 0; i < arrayprice.length; i++)
+        arrayprice[i].innerHTML = formatVND(arrayprice[i].innerHTML)
+
 </script>
 
 <!-- nav smooth scroll -->

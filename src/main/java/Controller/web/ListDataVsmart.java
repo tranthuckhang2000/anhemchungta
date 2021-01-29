@@ -20,6 +20,7 @@ public class ListDataVsmart extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SmartphoneEntity ie = new SmartphoneEntity();
         Collection<Smartphone> values = ie.getAllVsmart();
+        System.out.println(values);
         request.setAttribute("data", values);
         request.getRequestDispatcher("View/web/smartphone.jsp").forward(request, response);
     }
